@@ -1,0 +1,132 @@
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: "DM Sans";
+    background-color: hsl(27, 66%, 92%);
+    min-height: 100vh;
+    color: hsl(28, 10%, 53%)
+}
+
+.container {
+    min-width: 540px;
+    margin: 0 auto;  
+}
+
+.header {
+    position: relative;
+    background-color:  hsl(10, 79%, 65%);
+    padding: 33px 30px;
+    color: white;
+    margin-bottom: 24px;
+    border-radius: 16px;
+}
+
+.header::before  {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:  hsl(25, 47%, 15%);;
+}
+
+.header::after {
+     content: "";
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.header__description {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.header__balance {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.chart {
+    background-color: hsl(33, 100%, 98%);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.chart__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+
+.chart__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 384px;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 36px;
+}
+
+
+.value {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+   
+}
+
+.fill {
+    display: inline-block;
+    width: 50px;
+    /* height: 120px; */
+    background-color:  hsl(10, 79%, 65%);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.fill.active {
+    background-color: hsl(186, 34%, 60%);
+}
+
+.expense {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.expense__percentage  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.expense__percentage p:first-child {
+    font-weight: 700;
+    color:  hsl(25, 47%, 15%);
+}
+
+.expense__total p:nth-child(2) {
+    font-weight: 700;
+    font-size: 45px;
+    color: hsl(25, 47%, 15%);
+    margin-top: 12px;
+}
