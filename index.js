@@ -15,16 +15,22 @@ data.forEach(item => createBar(item))
  }
 
   function createBar(item){
+    const tooltip = document.createElement("span")
+    tooltip.innerText = "$" + item.amount
+    tooltip.className = "tooltip"
+
     const chartBar = document.createElement("span")
     chartBar.classList.add("fill")
     if(item.amount === max) chartBar.classList.add("active")
-    chartBar.style.height = `${item.amount * 5 }px`
+    chartBar.style.height = `${item.amount * 2.8 }px`
     
     const day = document.createElement("span")
     day.innerText = item.day
 
     const barContainer = document.createElement("div")
     barContainer.classList.add("value")
+
+    barContainer.appendChild(tooltip)
     barContainer.appendChild(chartBar)
     barContainer.appendChild(day)
 
